@@ -1,15 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose')
-const routes = require('./src/app/routes/routes')
+const routes = require('./routes')
 
 const app = express();
 
-mongoose.connect('mongodb+srv://Radardev:<1234>@cluster0-lux7d.mongodb.net/radar?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://larissa:1234@radardev-gjfqg.mongodb.net/semana10?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
 
-app.use(express.json())
+app.use(express.json());
 app.use(routes);
 
 
